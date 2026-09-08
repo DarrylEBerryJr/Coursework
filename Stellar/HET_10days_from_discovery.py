@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 import csv
 
+#sn1sp flm files are spectra data - before, during, and/or after peak (mostly) from HET at LRS
+
 x = []
 y = []
 z = []

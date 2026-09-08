@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 import csv
 
+#sn1ph dat files are photometry data - MJD, magnitude, error from ROTSE
+
 x = []
 y = []
 z = []
