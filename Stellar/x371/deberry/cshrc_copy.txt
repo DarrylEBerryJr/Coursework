@@ -1,0 +1,28 @@
+set prompt="%n@%m%B%~%b [%h]%B%T%b%#"
+
+#alias ds9 "ds9 -analysis ~/.ds9.ans"
+alias ls "ls --color"
+setenv PATH "home/smurotseDesktop/:~/bin:/products/bin:/usr/local/bin:~idl.lib/spline/tools/:$PATH"
+setenv LM_LICENSE_FILE ~/rsi/license/license.dat
+#source ~/rsi/idl/bin/idl_setup
+setenv IDL_PATH ~/idl.lib:+~/idl.lib/spline:+~/products/idlastron_v5.3:+~/products/idltools:+~/prj/rotse/idllib/lib
+setenv EXTRACT_PAR ~/idltools/umrotse_idl/tools/sex/
+setenv EXTRACT_CONFIG ~/idltools/umrotse_idl/tools/sex/
+setenv EDITOR emacs
+alias ll "ls -a -l"
+setenv PRINTER rotse3p
+setenv ZDBASE /products/database
+setenv UA2_PATH /products/usno
+#setenv IDL_STARTUP ~/.idl.startup
+setenv $PYTHONPATH /prj/sw/rotse/rotseana/py:$PYTHONPATH
+
+setenv ROTSE_CORR_MODULE /products/bin
+setenv ABC_CORR_MODULE ~/abc/src/perl
+setenv ABC_CONTROL_MODULE ~/abc/abc_control
+
+alias rotse3a "ssh observer@rotse3a"
+alias rotse3b "ssh observer@rotse3b"
+alias rotse3c "ssh -p 9000 observer@rotse3c"
+alias rotse3d "ssh observer@rotse3d"
+
+setenv LS_COLORS "no=00:fi
