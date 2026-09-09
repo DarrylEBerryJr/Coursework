@@ -1,0 +1,4 @@
+This is an example of a text file.
+It is not particularly interesting and
+is used to demo reading a file
+into a single string.

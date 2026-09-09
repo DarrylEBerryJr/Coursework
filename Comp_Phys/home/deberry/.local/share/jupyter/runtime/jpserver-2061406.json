@@ -1,0 +1,13 @@
+{
+  "base_url": "/user/deberry/",
+  "hostname": "127.0.0.1",
+  "password": false,
+  "pid": 2061406,
+  "port": 34445,
+  "root_dir": "/home/deberry",
+  "secure": false,
+  "sock": "",
+  "token": "3e21ecc5beb348ada659a8a37b3703b0",
+  "url": "http://127.0.0.1:34445/user/deberry/",
+  "version": "2.16.0"
+}

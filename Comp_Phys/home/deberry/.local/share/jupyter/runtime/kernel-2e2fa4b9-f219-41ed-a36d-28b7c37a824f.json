@@ -1,0 +1,13 @@
+{
+  "shell_port": 40377,
+  "iopub_port": 42769,
+  "stdin_port": 42513,
+  "control_port": 57041,
+  "hb_port": 34925,
+  "ip": "127.0.0.1",
+  "key": "111189b3-c9fc3a742d9bdff9dd09d064",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "jhub-shared",
+  "jupyter_session": "/home/deberry/Untitled.ipynb"
+}
