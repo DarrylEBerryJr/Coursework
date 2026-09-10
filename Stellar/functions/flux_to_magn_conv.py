@@ -5,6 +5,13 @@
 import numpy as np
 
 #Flux = [energy/area/time] = [erg / cm^2 / s]
+#integrate over band - https://mfouesneau.github.io/pyphot/pyphot.html
+#V band - http://astro.vaporia.com/start/v.html 
+#related package - https://mfouesneau.github.io/pyphot/pyphot.html
+#flux processing - https://doc.flux.audio/spat-revolution/Spat_Environment_Processing_Effect.html
+#using Trapezoid method of integration (from related package page)
+
+trap_int = 
 
 x_7 = [ ]
 x_10 = [ ]
@@ -14,7 +21,6 @@ y_10 = [ ] #scaled flux HET10
 
 yerr_7 = [ ] #y-error 7
 yerr_10 = [ ] #y-error 10
-
 
 '''def magn_to_flux_conv():
     F = F_0 * 10**(-0.4 * (delta_m)) #delta_m = m - m_0
