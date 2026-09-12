@@ -11,7 +11,13 @@ import numpy as np
 #flux processing - https://doc.flux.audio/spat-revolution/Spat_Environment_Processing_Effect.html
 #using Trapezoid method of integration (from related package page)
 
-trap_int = 
+
+
+F_0_V = 3.55    #E-9 erg/s/cm^2 Johnson Filter System for Vega
+F_0_B = 6.20    #E-9 erg/s/cm^2 Johnson Filter System for Vega
+
+m_0_V = 0.044   #Vega
+m_0_B = 0.163   #Vega
 
 x_7 = [ ]
 x_10 = [ ]
@@ -22,9 +28,6 @@ y_10 = [ ] #scaled flux HET10
 yerr_7 = [ ] #y-error 7
 yerr_10 = [ ] #y-error 10
 
-'''def magn_to_flux_conv():
-    F = F_0 * 10**(-0.4 * (delta_m)) #delta_m = m - m_0
-    return F'''
 
 #sn1sp flm files are spectra data - before, during, and/or after peak (mostly) from HET at LRS
 #Rest wavelength, scaled flux, error
@@ -42,10 +45,6 @@ def get_magn():
             y_7.append(sline_7[1])
             yerr_7.append(sline_7[2])
 
-    np_x_7 = np.array(x_7)
-    np_y_7 = np.array(y_7)
-    np_yerr_7 = np.array(yerr_7)
-
     file10 = '/Users/debj/Documents/code/Coursework/Stellar/x371/deberry/sn1sp/HET_10days_from_discovery.flm'
 
     with open(file10, 'r') as data:
@@ -55,15 +54,11 @@ def get_magn():
             y_10.append(sline_10[1])
             yerr_10.append(sline_10[2])
             
-    np_x_10 = np.array(x_10)
-    np_y_10 = np.array(y_10)
-    np_yerr_10 = np.array(yerr_10)
+    m_v = m_0_V - 2.5 * np.log10(np.divide(y_7, F_0_V)) #delta_m = m - m_0
+    m_b = m_0_B - 2.5 * np.log10(np.divide(y_7, F_0_V)) #delta_m = m - m_0
 
-    F_0_7 = np_y_7
-    F_7 = np_x_7
-    
-    delta_m = -2.5 * np.log10(np.divide(F_7, F_0_7)) #delta_m = m - m_0
-    print(delta_m)
 
+    print(m_v)
+    print(m_b)
 
 get_magn()

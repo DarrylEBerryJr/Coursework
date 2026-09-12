@@ -2,20 +2,17 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-#sn1sp flm files are spectra data - before, during, and/or after peak (mostly) from HET at LRS
-#Rest wavelength, scaled flux, error
+#sn1sp flm files are spectra data - before, during, and/or after peak (mostly) from HET using LRS device
+#Rest wavelength, scaled flux, error in scaled flux
 
 x = [ ] #rest wavelength
 y = [ ] #scaled flux
-yerr = [ ] #y-error
+yerr = [ ] #flux-error
 
 #function made with no call for call in other file
-def HET_7():
-
-    file = '/Users/debj/Documents/code/Coursework/Stellar/x371/deberry/sn1sp/HET_7days_from_discovery.flm'
-
-    #open process form Comp Phys course - 3340_c_f26_deberry.ipynb
-    with open(file, 'r') as data:
+def HET_7(n):
+    #open process from Comp Phys course - 3340_c_f26_deberry.ipynb
+    with open(n, 'r') as data:
         for line in data:
             #split process from python documentation and strip from Comp Phys Course
             sline=line.strip().split()
@@ -30,11 +27,9 @@ def HET_7():
     plt.show()
 
 #function made with no call for call in other file
-def HET_10():
-
-    file = '/Users/debj/Documents/code/Coursework/Stellar/x371/deberry/sn1sp/HET_10days_from_discovery.flm'
-
-    with open(file, 'r') as data:
+def HET_10(n):
+    #open process from Comp Phys course - 3340_c_f26_deberry.ipynb
+    with open(n, 'r') as data:
         for line in data:
             sline=line.strip().split()
             x.append(sline[0])
@@ -46,3 +41,6 @@ def HET_10():
     plt.xlabel('Rest Wavelength')
     plt.ylabel('Scaled Flux')
     plt.show()
+
+#Code by Darryl E Berry Jr (c) 2026
+#2nd Year PhD Student - SMU
