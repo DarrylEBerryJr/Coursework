@@ -1,5 +1,6 @@
 #Called in magnitude_comparison.py 
- 
+#SCIPY version
+
 # #Computational Physics 2nd Ed by Mark Newman, Section 5.1.1
 #v band 5510 Angstroms plus/minus 880 Angstroms - http://astro.vaporia.com/start/v.html
 #SciPy modules - trapezoid - https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html
